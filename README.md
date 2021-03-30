@@ -360,7 +360,7 @@ class_impurity = data_impurity_1st['class']
 gain = dict()
 data_impurity_1st.pop('class')
 for key in data_impurity_1st.keys():
-    gain[key] = class_impurity - sum(data_impurity[key].values())
+    gain[key] = class_impurity - sum(data_impurity_1st[key].values())
 pprint(gain)
 min_gain = sorted(gain, key=gain.get)[0]
 print('\nMinimal Information Gain: ', min_gain,'(',gain[min_gain],')')
